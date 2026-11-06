@@ -1,0 +1,4 @@
+package com.agenda.clinica.entity;
+import jakarta.persistence.*;
+@Entity @Table(name="medicos")
+public class Medico { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @Column(nullable=false,length=120) private String nombre; @Column(length=100) private String correo; @Column(nullable=false) private boolean activo=true; @ManyToOne(optional=false) @JoinColumn(name="especialidad_id") private Especialidad especialidad; public Long getId(){return id;} public String getNombre(){return nombre;} public void setNombre(String v){nombre=v;} public String getCorreo(){return correo;} public void setCorreo(String v){correo=v;} public boolean isActivo(){return activo;} public void setActivo(boolean v){activo=v;} public Especialidad getEspecialidad(){return especialidad;} public void setEspecialidad(Especialidad v){especialidad=v;} }

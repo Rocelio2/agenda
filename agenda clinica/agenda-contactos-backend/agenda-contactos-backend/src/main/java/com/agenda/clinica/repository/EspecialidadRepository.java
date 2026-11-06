@@ -1,0 +1,1 @@
+package com.agenda.clinica.repository; import com.agenda.clinica.entity.Especialidad; import org.springframework.data.jpa.repository.JpaRepository; public interface EspecialidadRepository extends JpaRepository<Especialidad,Long>{}
